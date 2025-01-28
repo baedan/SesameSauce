@@ -1,0 +1,40 @@
+[project]
+name = "SesameSauce"
+version = "0.1.0"
+description = "Shaoyang Mahjong built on ECS, with RL training in mind"
+authors = [
+    {name = "baedan", email = "anarchotransformer@proton.me"},
+]
+dependencies = []
+requires-python = ">=3.13"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
+
+[dependency-groups]
+test = [
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+]
+lint = [
+    "flake8>=7.1.1",
+    "black>=24.10.0",
+]
+doc = [
+    "mkdocs>=1.6.1",
+]
+dev = [
+    "mypy>=1.14.1",
+]
+
+[tool.flake8]
+max-line-length = 88
+exclude = [.git,__pycache]
+
